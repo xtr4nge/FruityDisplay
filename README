@@ -1,0 +1,53 @@
+FruityDisplay v1.0
+------------------
+Allows you to control FruityWiFi using a adafruit-16x2 LCD Display+Keypad.
+FruityWiFi needs to be up an running if you want to use the modules screen.
+
+
+SECTIONS
+--------
+- Home:     Welcome screen.
+- Modules:  List of modules available. START|STOP modules
+- Commands: List of commands available. ADD|REMOVE commands in init.conf
+- Config:   [TO BE IMPLEMENTED]
+- Services: [TO BE IMPLEMENTED]
+- About:    FruityWiFi version and FruityDisplay version.
+- Exit
+
+
+SETUP & REFERENCES
+------------------
+https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi?view=all
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+
+
+CONFIG (init.conf)
+------
+DEBUG: To debug the screen options without using the screen.
+SCREEN_MODULES: ENABLE|DISABLE modules on screen. [True|False]
+SCREEN_COMMANDS: ENABLE|DISABLE commands on screen. [True|False]
+PREFIX: Prefix to be added before an option name on screen.
+
+[api] Setup API details (server and token) to access FruityWiFi.
+
+[white_list] When this option is enabled (True), only the modules in the list are loaded into the LCD.
+
+[black_list] When this option is enabled (True), the modules in the list are excluded from the LCD.
+
+Note: white_list and black_list can be combined.
+
+[commands] Setup commands list. Commands can be ADDED|REMOVED using format: {name}||{command}
+
+
+DEPENDENCIES
+------------
+apt-get -y install python-smbus
+apt-get -y install i2c-tools
+
+apt-get -y install python-smbus
+apt-get -y install python-requests
+apt-get -y install python-configobj
+
+apt-get -p install python-pip
+pip install --upgrade requests
+
