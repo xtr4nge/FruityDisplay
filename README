@@ -4,7 +4,7 @@ Allows you to control FruityWiFi using a adafruit-16x2 LCD Display+Keypad.
 FruityWiFi needs to be up an running if you want to use the modules screen.
 
 
-SECTIONS
+SCREENS
 --------
 - Home:     Welcome screen.
 - Modules:  List of modules available. START|STOP modules
@@ -23,7 +23,7 @@ https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configurin
 
 CONFIG (init.conf)
 ------
-DEBUG: To debug the screen options without using the screen.
+DEBUG: To debug the screen options without using the LCD display.
 SCREEN_MODULES: ENABLE|DISABLE modules on screen. [True|False]
 SCREEN_COMMANDS: ENABLE|DISABLE commands on screen. [True|False]
 PREFIX: Prefix to be added before an option name on screen.
